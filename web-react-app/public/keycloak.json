@@ -1,0 +1,13 @@
+{
+  "realm": "dev",
+  "auth-server-url": "http://192.168.0.5:8088/auth",
+  "ssl-required": "external",
+  "resource": "middleware-service",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "e5d17703-9537-4838-9dfa-d81c79ee9cbb"
+  },
+  "use-resource-role-mappings": true,
+  "confidential-port": 0,
+  "policy-enforcer": {}
+}
