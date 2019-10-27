@@ -1,0 +1,57 @@
+version: '3'
+
+volumes:
+  postgres_data:
+      driver: local
+
+services:
+  postgres:
+      image: postgres:11
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+      #  - ./datos/pg:/var/lib/postgresql/data
+      environment:
+        POSTGRES_DB: keycloak
+        POSTGRES_USER: keycloak
+        POSTGRES_PASSWORD: keycloak
+  keycloak:
+      image: jboss/keycloak:7.0.0
+      #build:
+      #  context: ./datos/keycloak
+      environment:
+        PROXY_ADDRESS_FORWARDING: 'true'
+        DB_VENDOR: POSTGRES
+        DB_ADDR: postgres
+        DB_DATABASE: keycloak
+        DB_USER: keycloak
+        DB_SCHEMA: public
+        DB_PASSWORD: keycloak
+        KEYCLOAK_USER: admin
+        KEYCLOAK_PASSWORD: 12345
+        # Uncomment the line below if you want to specify JDBC parameters. The parameter below is just an example, and it shouldn't be used in production without knowledge. It is highly recommended that you read the PostgreSQL JDBC driver documentation in order to use it.
+        #JDBC_PARAMS: "ssl=true"
+      ports:
+        - 9098:9990
+        - 8088:8080
+      #volumes:
+      #  - ./datos/keycloak/themes:/opt/jboss/keycloak/themes
+      depends_on:
+        - postgres
+  wildfly:
+      image: jboss/wildfly:16.0.0.Final
+      build:
+        context: ./datos/wildfly
+      volumes:
+        - ./datos/wildfly/deployments:/opt/jboss/wildfly/standalone/deployments
+      ports:
+        - "8080:8080"
+        - "9990:9990"
+      depends_on:
+        - keycloak
+  nginx:
+      image: nginx:alpine
+      ports:
+        - 8070:80
+      volumes:
+        - ./datos/nginx/www:/var/www
+        - ./datos/nginx/conf:/etc/nginx/conf.d

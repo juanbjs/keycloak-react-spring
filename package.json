@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "npm run-script build && npm run-script remove && npm run-script copy",
+    "build": "cd keycloak-spring-middleware/ && mvn clean package",
+    "remove": "rm -f ./datos/wildfly/deployments/*",
+    "copy": "cp keycloak-spring-middleware/target/midleware-service.war ./datos/wildfly/deployments/"
+  } 
+}

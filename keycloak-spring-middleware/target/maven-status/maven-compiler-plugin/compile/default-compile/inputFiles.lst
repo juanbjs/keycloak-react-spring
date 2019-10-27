@@ -1,0 +1,8 @@
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/controller/TestRestController.java
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/security/SecurityProperties.java
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/security/OAuth2RestTemplateConfigurer.java
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/security/SecurityConfigurer.java
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/security/SecurityContextUtils.java
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/Application.java
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/controller/EmployeeRestController.java
+/home/juanzarate/Proyectos/keycloak-spring-middleware/keycloak-spring-middleware/src/main/java/com/juanzarate/keycloakSpringMiddleware/security/JwtAccessTokenCustomizer.java

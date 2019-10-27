@@ -1,0 +1,64 @@
+{
+  "groups": [
+    {
+      "name": "rest.security",
+      "type": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties"
+    },
+    {
+      "name": "rest.security.cors",
+      "type": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties$Cors",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties",
+      "sourceMethod": "getCors()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "rest.security.api-matcher",
+      "type": "java.lang.String",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties"
+    },
+    {
+      "name": "rest.security.cors.allow-credentials",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties$Cors"
+    },
+    {
+      "name": "rest.security.cors.allowed-headers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties$Cors"
+    },
+    {
+      "name": "rest.security.cors.allowed-methods",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties$Cors"
+    },
+    {
+      "name": "rest.security.cors.allowed-origins",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties$Cors"
+    },
+    {
+      "name": "rest.security.cors.exposed-headers",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties$Cors"
+    },
+    {
+      "name": "rest.security.cors.max-age",
+      "type": "java.lang.Long",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties$Cors"
+    },
+    {
+      "name": "rest.security.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "rest.security.issuer-uri",
+      "type": "java.lang.String",
+      "sourceType": "com.juanzarate.keycloakSpringMiddleware.security.SecurityProperties"
+    }
+  ],
+  "hints": []
+}
