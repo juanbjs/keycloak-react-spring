@@ -8,15 +8,18 @@ This repository creates a ReactJS and Spring with keycloak Session Validation
 git clone https://github.com/juanbjs/keycloak-react-spring.git
 
 Start Keycloak, postgres and wildfly with Docker
+  cd keycloak-react-spring
+  docker-compose up --bluid -d
 
-cd keycloak-react-spring
-
-docker-compose up --bluid -d
 
 Start React-app
-cd keycloak-react-spring/web-react-app
+  cd keycloak-react-spring/web-react-app
+  npm start
 
-npm start
+
+Create Spring war
+  cd keycloak-react-spring
+  npm start
 
 ```
 
