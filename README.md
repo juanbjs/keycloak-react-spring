@@ -1,6 +1,6 @@
 # Keycloak-React-Spring
 
-This repository creates a ReactJS and Spring with keycloak Session Validation
+This repository creates a React JS project and a Spring project with keycloak session validation
 
 ## Installation
 
